@@ -1,9 +1,8 @@
 SC.initialize({
   client_id: 'a3e059563d7fd3372b49b37f00a00bcf'
 });
-
 $(document).ready(function() {
-    SC.stream('/tracks/575734953',function(sound){
+    SC.stream('/tracks/307049640',function(sound){
          $('#start1').click(function(e) {
            e.preventDefault();
            sound.start();
@@ -14,7 +13,7 @@ $(document).ready(function() {
            sound.stop();
          });
     });
-    SC.stream('/tracks/123676319',function(sound){
+    SC.stream('/tracks/207601976',function(sound){
          $('#start11').click(function(e) {
            e.preventDefault();
            sound.start();
@@ -25,8 +24,8 @@ $(document).ready(function() {
            sound.stop();
          });
     });
-/*palat*/
-    SC.stream('/tracks/138079309',function(sound){
+
+    SC.stream('/tracks/283626797',function(sound){
          $('#start12').click(function(e) {
            e.preventDefault();
            sound.start();
@@ -37,8 +36,8 @@ $(document).ready(function() {
            sound.stop();
          });
     });
-/*Nashe Si Chadh Gayi */
-    SC.stream('/tracks/397608699',function(sound){
+
+    SC.stream('/tracks/48517778',function(sound){
          $('#start13').click(function(e) {
            e.preventDefault();
            sound.start();
@@ -49,8 +48,8 @@ $(document).ready(function() {
            sound.stop();
          });
     });
-/*janam*/
-    SC.stream('/tracks/381306011',function(sound){
+
+    SC.stream('/tracks/55928350',function(sound){
          $('#start14').click(function(e) {
            e.preventDefault();
            sound.start();
@@ -65,9 +64,9 @@ $(document).ready(function() {
 
 
 
-/*malare*/
 
-    SC.stream('/tracks/208641386',function(sound){
+
+    SC.stream('/tracks/134780870',function(sound){
          $('#start2').click(function(e) {
            e.preventDefault();
            sound.start();
@@ -77,11 +76,7 @@ $(document).ready(function() {
            e.preventDefault();
            sound.stop();
          });
-       });
     });
-
-
-  $(document).ready(function() {
     SC.stream('/tracks/247201190',function(sound){
          $('#start21').click(function(e) {
            e.preventDefault();
@@ -125,7 +120,16 @@ $(document).ready(function() {
           });
 
 
-    
+    SC.stream('/tracks/68272526',function(sound){
+         $('#start4').click(function(e) {
+           e.preventDefault();
+           sound.start();
+         });
+
+         $('#stop4').click(function(e) {
+           e.preventDefault();
+           sound.stop();
+         });
     });
     SC.stream('/tracks/156682326',function(sound){
          $('#start41').click(function(e) {
