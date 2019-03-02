@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+    <title>Music Cloud</title>
+	<script src="//connect.soundcloud.com/sdk.js"></script>
+	<script src="mayoorika.github.io/js/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Music">
+    <meta name="keywords" content="">
+    <meta name="author" content="Mithushan">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="js/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="js/plugins/nice_select/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="js/plugins/player/volume.css">
+	<link rel="stylesheet" type="text/css" href="js/plugins/scroll/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+	.stop{
+          width:100px;
+          height:100px;
+          margin-top:10px;
+      }
+      .ms_rcnt_box_img img{
+        height: 250px;
+      }
+      .stop:hover{
+        background-color:#740A0C  ;
+        border-radius: 50px;
+      }
+	</style>
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+	<!----Loader Start---->
+	<div class="ms_loader">
+		<div class="wrap">
+		  <img src="images/loader.gif" alt="">
+		</div>
+	</div>
+    <!----Main Wrapper Start---->
+    <div class="ms_main_wrapper">
+        <!---Side Menu Start--->
+        <div class="ms_sidemenu_wrapper">
+            <div class="ms_nav_close">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+            <div class="ms_sidemenu_inner">
+                <div class="ms_logo_inner">
+                    <div class="ms_logo">
+                        <a href="index-2.html"><img src="images/logo.png" alt="" class="img-fluid"/></a>
+                    </div>
+                    <div class="ms_logo_open">
+                        <a href="index-2.html"><img src="images/open_logo.png" alt="" class="img-fluid"/></a>
+                    </div>
+                </div>
+                <div class="ms_nav_wrapper">
+                    <ul>
+                        <li><a href="index-2.html" class="active" title="Discover">
+						<span class="nav_icon">
+							<span class="icon icon_discover"></span>
+						</span>
+						<span class="nav_text">
+							discover
+						</span>
+						</a>
+                        </li>
+                        <li><a href="album.html" title="Albums">
+						<span class="nav_icon">
+							<span class="icon icon_albums"></span>
+						</span>
+						<span class="nav_text">
+							albums
+						</span>
+						</a>
+                        </li>
+                        <li><a href="artist.html" title="Artists">
+						<span class="nav_icon">
+							<span class="icon icon_artists"></span>
+						</span>
+						<span class="nav_text">
+							artists
+						</span>
+						</a>
+                        </li>
+                        <li><a href="genres.html" title="Genres">
+						<span class="nav_icon">
+							<span class="icon icon_genres"></span>
+						</span>
+						<span class="nav_text">
+							genres
+						</span>
+						</a>
+                        </li>
+                        <li><a href="top_track.html" title="Top Tracks">
+						<span class="nav_icon">
+							<span class="icon icon_tracks"></span>
+						</span>
+						<span class="nav_text">
+							top tracks
+						</span>
+						</a>
+                        </li>
+                        <li><a href="free_music.html" title="Free Music">
+						<span class="nav_icon">
+							<span class="icon icon_music"></span>
+						</span>
+						<span class="nav_text">
+							free music
+						</span>
+						</a>
+                        </li>
+                        <li><a href="stations.html" title="Stations">
+						<span class="nav_icon">
+							<span class="icon icon_station"></span>
+						</span>
+						<span class="nav_text">
+							stations
+						</span>
+						</a>
+                        </li>
+                    </ul>
+                    <ul class="nav_downloads">
+                        <li><a href="download.html" title="Downloads">
+						<span class="nav_icon">
+							<span class="icon icon_download"></span>
+						</span>
+						<span class="nav_text">
+							downloads
+						</span>
+						</a>
+                        </li>
+                        <li><a href="purchase.html" title="Purchased">
+						<span class="nav_icon">
+							<span class="icon icon_purchased"></span>
+						</span>
+						<span class="nav_text">
+							purchased
+						</span>
+						</a>
+                        </li>
+                        <li><a href="favourite.html" title="Favourites">
+						<span class="nav_icon">
+							<span class="icon icon_favourite"></span>
+						</span>
+						<span class="nav_text">
+							favourites
+						</span>
+						</a>
+                        </li>
+                        <li><a href="history.html" title="History">
+						<span class="nav_icon">
+							<span class="icon icon_history"></span>
+						</span>
+						<span class="nav_text">
+							history
+						</span>
+						</a>
+                        </li>
+                    </ul>
+                    <ul class="nav_playlist">
+                        <li><a href="feature_playlist.html" title="Featured Playlist">
+						<span class="nav_icon">
+							<span class="icon icon_fe_playlist"></span>
+						</span>
+						<span class="nav_text">
+							featured playlist
+						</span>
+						</a>
+                        </li>
+                        <li><a href="add_playlist.html" title="Create Playlist">
+						<span class="nav_icon">
+							<span class="icon icon_c_playlist"></span>
+						</span>
+						<span class="nav_text">
+							create playlist
+						</span>
+						</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!---Main Content Start--->
+		<!---/////////////////////////////////////////////// 2 nd row -+////////////////////////////////////////////////-->
+
+		<div class="ms_content_wrapper padder_top80">
+      <div class="ms_rcnt_slider">
+            <div class="ms_heading">
+                <h1>Recently Played</h1>
+                <span class="veiw_all"><a href="#">view more</a></span>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="images/music/natpethunai.jpg" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                        <img src="images/svg/play.svg" alt="" id="start1">
+											                  <img src="images/svg/stop.png" alt="" class="stop" id="stop1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Kerala</a></h3>
+                                <p>Hiphop Tamizha</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="images/music/rajkumar.jpg" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                      <img src="images/svg/play.svg" alt="" id="start11">
+                                      <img src="images/svg/stop.png" alt="" class="stop" id="stop11">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Saree Ke Fall Sa</a></h3>
+                                <p>Nakash Aziz , Antara Mitra</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="images/music/main.jpg" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                      <img src="images/svg/play.svg" alt="" id="start12">
+                                      <img src="images/svg/stop.png" alt="" class="stop" id="stop12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Palat</a></h3>
+                                <p>Arijit Singh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="images/music/Befikre.jpg" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                      <img src="images/svg/play.svg" alt="" id="start13">
+                                      <img src="images/svg/stop.png" alt="" class="stop" id="stop13">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Nashe Si Chadh Gayi </a></h3>
+                                <p>Arijit Singh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="images/music/dilwale.jpg" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                      <img src="images/svg/play.svg" alt="" id="start14">
+                                      <img src="images/svg/stop.png" alt="" class="stop" id="stop14">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Janam Janam</a></h3>
+                                <p>Arijit Singh, Antara Mitra</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ms_rcnt_box">
+                            <div class="ms_rcnt_box_img">
+                                <img src="images/music/premam.jpg" alt="">
+                                <div class="ms_main_overlay">
+                                    <div class="ms_box_overlay"></div>
+                                    <div class="ms_play_icon">
+                                      <img src="images/svg/play.svg" alt="" id="start2">
+                                      <img src="images/svg/stop.png" alt="" class="stop" id="stop2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms_rcnt_box_text">
+                                <h3><a href="#">Malare</a></h3>
+                                <p>Vijay Yesudas</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next slider_nav_next"></div>
+            <div class="swiper-button-prev slider_nav_prev"></div>
+        </div>
+            <!---Weekly Top 15--->
+
+            <!---Featured Artists Music--->
+
+			<!--//////////////////////////////////// Add Section Start //////////////////////////////////// ---->
+<!--
+			<div class="ms_advr_wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<a href="#"><img src="images/adv.jpg" alt="" class="img-fluid"/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+-->
+			<!--////////////////////////////////////  advetisment---------------->
+
+        </div>
+		<!---/////////////////////////////////////////2nd Rwow end/////////////////////////////////-->
+    </div>
+
+
+    <!--Main js file Style-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/plugins/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/plugins/player/jplayer.playlist.min.js"></script>
+    <script type="text/javascript" src="js/plugins/player/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="js/plugins/player/audio-player.js"></script>
+    <script type="text/javascript" src="js/plugins/player/volume.js"></script>
+    <script type="text/javascript" src="js/plugins/nice_select/jquery.nice-select.min.js"></script>
+	<script type="text/javascript" src="js/plugins/scroll/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
